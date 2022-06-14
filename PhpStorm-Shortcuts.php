@@ -23,4 +23,5 @@ Alt + J => Select next occurrence of the current word or selection
 Alt + Shift + J => for unselection
 Ctrl + Alt + Shift + J => Select all the Similar Text
 
+Select Test and make capital Letter/Small Letter
 

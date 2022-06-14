@@ -18,6 +18,38 @@ php artisan migrate:rollback => This will go One Step backwords
 php artisan migrate
 
 Concept Learning In this Project:
+1. Routes
+2. Controller
+3. Views(Blade File)
+4. HTML forms(Blade)
+5. Validation
+6. Eloquent
+7. Sending Mails
+8. Flashing Data (Session/Cookies)
+9. Helper Function(URL Helpers)
+10. Authentication
+11. Middleware
+12. Events & Listeners
+13. Queues
+14. Deployment: Basic Server Setup
+15. Artisan Commands
+16. Model Factories
+17. Database & Table Seeders
+18. Image Upload
+19. Telescope
+20. Lazy Loading vs. Eager Loading (Fixing N + 1 Problem)
+21. Pagination
+22. Policies
+23. Eloquent Relationships
+24. Testing 101 Using PHPUnit
+25. SEO Friendly URLS
+26. Localization, Translations & Language Files
+27. Multi Image File Upload & Gallery
+
+28. Vue Basics
+
+29. Git Push and Pull
+
 
 
 
