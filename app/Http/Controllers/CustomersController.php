@@ -9,11 +9,25 @@ class CustomersController extends Controller
 {
     public function list ()
     {
-        $customers = Customer::all();
+        // Using Scope In Database Model
+        $activeCustomers = Customer::active()->get();
+        $inactiveCustomers = Customer::inactive()->get();
 
-        return view('internals.customers', [
-            'customers' => $customers
-        ]);
+        // Two different queries
+        // $activeCustomers = Customer::where('status' , 1)->get();
+        // $inactiveCustomers = Customer::where('status' , 0)->get();
+
+        // Fetching all the Customer
+        // $customers = Customer::all();
+
+        // Passing data in Array from
+        /* return view('internals.customers', [
+            'activeCustomers' => $activeCustomers,
+            'inactiveCustomers' => $inactiveCustomers,
+        ]); /**/
+
+        // passing data in compact (Shorthand Notation)
+        return view('internals.customers', compact('activeCustomers', 'inactiveCustomers'));
     }
 
     public function store()
@@ -21,14 +35,19 @@ class CustomersController extends Controller
         // Validation
         $data = request()->validate([
             'name' => 'required|min:3',
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'status' => 'required'
         ]);
 
+        // Saving to Database In One Line
+        Customer::create($data);
+
         // Saving to Database
-        $customer = new Customer();
+        /* $customer = new Customer();
         $customer->name = request('name');
         $customer->email = request('email');
-        $customer->save();
+        $customer->status = request('status');
+        $customer->save(); /**/
 
         return back();
     }
