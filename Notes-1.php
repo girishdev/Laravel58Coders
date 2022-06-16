@@ -18,6 +18,35 @@ Note: Migration Describes Database
 php artisan migrate:rollback => This will go One Step backwords
 php artisan migrate
 
+Model are the Singular version what we do
+php artisan make:model Company -m
+
+Adding Company:
+php artisan tinker
+$c = Company::create(['name' => 'ABC Company', 'phone' => '123-123-1234']);
+Relationship
+1. A Company has Many Customers
+2. A Customer Belongs to the Company
+
+Note: If you keep It Naming convention Singular to Plural
+    the all it works
+
+php artisan migrate:fresh => Generate Fresh Tables
+
+$c = Company::first();
+$c = $c->customers;
+
+$c = Customer::first();
+$c = $c->company;
+
+Calling as a Property and Calling as a methods
+
+.col-2 (Created Html div)
+
+php artisan help make:controller
+php artisan make:controller TestController -r
+php artisan make:controller TestagainController -r -m Customer
+
 Eloquent ia able to handel many Different Databases Drivers
 
 IDE Setup:
