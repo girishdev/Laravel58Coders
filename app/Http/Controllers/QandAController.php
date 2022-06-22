@@ -76,9 +76,12 @@ class QandAController extends Controller
      * @param  \App\QandA  $qandA
      * @return \Illuminate\Http\Response
      */
-    public function edit(QandA $qandA)
+    public function edit(QandA $qandA, $id)
     {
-        return "I am in Edit Action....";
+        $question = QandA::where('id', '=', $id)->firstOrFail();
+        $topics = ['Laravel', 'Php', 'Mysql'];
+        $qtype = ['Basic', 'Intermediate', 'Advanced'];
+        return view('QandA.edit', compact('question', 'topics', 'qtype'));
     }
 
     /**
@@ -88,9 +91,28 @@ class QandAController extends Controller
      * @param  \App\QandA  $qandA
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, QandA $qandA)
+    public function update(Request $request, QandA $qandA, $id)
     {
-        //
+        // Validation
+        $data = $request->validate([
+            'topic' => 'required',
+            'qtype' => 'required',
+            'question' => 'required',
+            'answer' => 'required',
+            'link' => '',
+        ]);
+
+        // Updating Data to the Database
+        QandA::where('id', $id)
+            ->update([
+                'topic' => $request->topic,
+                'qtype' => $request->qtype,
+                'question' => $request->question,
+                'answer' => $request->answer,
+                'link' => $request->link,
+            ]);
+
+        return redirect('qanda');
     }
 
     /**
