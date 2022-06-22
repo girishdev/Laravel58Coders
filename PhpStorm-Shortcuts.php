@@ -23,5 +23,15 @@ Alt + J => Select next occurrence of the current word or selection
 Alt + Shift + J => for unselection
 Ctrl + Alt + Shift + J => Select all the Similar Text
 
+Ctrl + NumPad(-) => Collapse All
+Ctrl + NumPad(+) => Expand All
+
+Alt + Shift + 1 => Opens file path on left side
+Alt + 1 => Open/Hide Left folder section
+
+To navigate between code blocks, press Ctrl+[ or Ctrl+].
+
+
+
 Select Test and make capital Letter/Small Letter
 

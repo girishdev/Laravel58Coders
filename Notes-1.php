@@ -47,6 +47,15 @@ php artisan help make:controller
 php artisan make:controller TestController -r
 php artisan make:controller TestagainController -r -m Customer
 
+php artisan make:model qanda -m
+php artisan make:controller qandasController - r -m qanda
+
+
+Model - Singular
+Controller - Plural
+php artisan make:model Qanda -m
+php artisan make:controller QandasController - r -m Qanda
+
 Eloquent ia able to handel many Different Databases Drivers
 
 IDE Setup:

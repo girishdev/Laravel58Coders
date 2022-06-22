@@ -18,6 +18,8 @@
 Route::view('/', 'home');
 Route::view('about', 'about');
 Route::view('contact', 'contact');
+Route::delete('qanda/{id}', 'QandAController@destroy');
+Route::resource('qanda', 'QandAController');
 
 //Route::get('customers', 'CustomersController@index');
 //Route::get('customers/create', 'CustomersController@create');
