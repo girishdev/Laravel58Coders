@@ -29,4 +29,9 @@
         <hr>
     @endforeach
 
+    <div class="pagination">
+        {!! $questions->render() !!}
+    </div>
+    {{--{{ $questions->links() }}--}}
+
 @endsection

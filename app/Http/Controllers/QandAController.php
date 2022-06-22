@@ -16,7 +16,9 @@ class QandAController extends Controller
     public function index()
     {
         // Fetching all the Question and Answers
-        $questions = QandA::all();
+        // $questions = QandA::all();
+        // $questions = QandA::simplePaginate(10);
+        $questions = QandA::paginate(10);
 
         return view('QandA.index', compact('questions'));
     }
@@ -128,5 +130,14 @@ class QandAController extends Controller
         QandA::findOrFail($id)->delete();
 
         return redirect('qanda');
+    }
+
+    public function searchQuestion(Request $request)
+    {
+        // $searchQuestion = QandA::where('question', 'LIKE', "%$request->value%")->get();
+        // $searchQuestion = QandA::select(['question', 'answer'])->where('question', 'LIKE', "%$request->value%")->get();
+        $searchQuestion = QandA::select(['question', 'answer'])->where('question', 'LIKE', "%$request->value%")->get()->toArray();
+
+        return response()->json([$searchQuestion]);
     }
 }

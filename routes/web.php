@@ -21,6 +21,7 @@ Route::view('contact', 'contact');
 Route::delete('qanda/{id}', 'QandAController@destroy');
 Route::get('qanda/{id}/edit', 'QandAController@edit');
 Route::patch('qanda/{id}/edit', 'QandAController@update');
+Route::get('qanda/searchQuestion', 'QandAController@searchQuestion');
 Route::resource('qanda', 'QandAController');
 
 //Route::get('customers', 'CustomersController@index');

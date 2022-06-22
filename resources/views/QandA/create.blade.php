@@ -37,10 +37,10 @@
 
                 <div class="form-group">
                     <label for="question">Question: </label>
-                    <input type="text" name="question" value="{{ old('question') ?? $questions->question }}" class="form-control">
+                    <input type="text" id="question" name="question" value="{{ old('question') ?? $questions->question }}" class="form-control">
                     <div>{{ $errors->first('question') }}</div>
                 </div>
-
+                <div id="searchResponse"></div>
                 <div class="form-group">
                     <label for="answer">Answer: </label>
                     <textarea class="form-control" id="answer" name="answer" rows="8"></textarea>
@@ -58,6 +58,10 @@
 
             </form>
         </div>
+        <!--<div class="col-12">
+            <br>
+            <div id="searchResponse"></div>
+        </div>-->
     </div>
 @endsection
 
@@ -67,6 +71,30 @@
             .create( document.querySelector( '#answer' ) )
             .catch( error => {
                 console.error( error );
-            } );
+            });
+
+        $(document).ready(function() {
+            $("#question").keyup(function(){
+                var value = $(this).val();
+                $('#searchResponse').html('');
+                if (value.length >= 3) {
+                    $.ajax({
+                        type: "GET",
+                        url: '/qanda/searchQuestion',
+                        data: {'value': value},
+                        dataType: 'json',
+                        success: function(data) {
+                            $.each(data, function() {
+                                $.each(this, function(k, v) {
+                                    console.log('each:: ' + k +' :: '+ v.question +' :: '+ v.answer);
+                                    var htmlContent = '<h4>' + v.question + '</h4><h5>' + v.answer + '</h5>';
+                                    $('#searchResponse').html(htmlContent);
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+        });
     </script>
 @endsection

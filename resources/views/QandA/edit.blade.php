@@ -37,7 +37,7 @@
 
                 <div class="form-group">
                     <label for="question">Question: </label>
-                    <input type="text" name="question" value="{{ old('question') ?? $question->question }}" class="form-control">
+                    <input type="text" id="question" name="question" value="{{ old('question') ?? $question->question }}" class="form-control">
                     <div>{{ $errors->first('question') }}</div>
                 </div>
 
