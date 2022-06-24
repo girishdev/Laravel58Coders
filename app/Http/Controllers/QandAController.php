@@ -20,7 +20,29 @@ class QandAController extends Controller
         // $questions = QandA::simplePaginate(10);
         $questions = QandA::paginate(10);
 
-        return view('QandA.index', compact('questions'));
+        // Query Bases On Topics
+        $laravelBasic = QandA::where([['topic','=','Laravel'],['qtype','=','Basic']])->paginate(10);
+        $laravelIntermediate = QandA::where([['topic','=','Laravel'],['qtype','=','Intermediate']])->paginate(10);
+        $laravelAdvanced = QandA::where([['topic','=','Laravel'],['qtype','=','Advanced']])->paginate(10);
+
+        $phpQuestions = QandA::where('topic','=','Php')->paginate(10);
+
+        $mysqlQuestions = QandA::where('topic','=','Mysql')->paginate(10);
+
+        $awsBasic = QandA::where([['topic','=','AWS'], ['qtype','=','Basic']])->paginate(10);
+        $awsIntermediate = QandA::where([['topic','=','AWS'], ['qtype','=','Intermediate']])->paginate(10);
+        $awsAdvanced = QandA::where([['topic','=','AWS'], ['qtype','=','Advanced']])->paginate(10);
+        // dd($awsBasic);
+        return view('QandA.index', compact(
+            'laravelBasic',
+            'laravelIntermediate',
+            'laravelAdvanced',
+            'phpQuestions',
+            'mysqlQuestions',
+            'awsBasic',
+            'awsIntermediate',
+            'awsAdvanced',
+        ));
     }
 
     /**
@@ -31,7 +53,7 @@ class QandAController extends Controller
     public function create()
     {
         $questions = new QandA();
-        $topics = ['Laravel', 'Php', 'Mysql'];
+        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS'];
         $qtype = ['Basic', 'Intermediate', 'Advanced'];
         return view('QandA.create', compact('questions', 'topics', 'qtype'));
     }
