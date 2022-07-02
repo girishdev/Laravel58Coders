@@ -64,16 +64,34 @@
             <a class="dropdown-item" href="/qanda/awsadvanced">AWS Advance</a>
         </div>
     </div>
-    <!--    <div class="dropdown">
+    <div class="dropdown" style="margin-right: 5px;">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            QandA
+            GIT
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Laravel</a>
-            <a class="dropdown-item" href="#">PHP</a>
-            <a class="dropdown-item" href="#">Mysql</a>
-            <a class="dropdown-item" href="#">JavaScript</a>
-            <a class="dropdown-item" href="#">AWS</a>
+            <a class="dropdown-item" href="/qanda/gitbasic">GIT Basic</a>
+            <a class="dropdown-item" href="/qanda/gitintermediate">GIT Intermediat</a>
+            <a class="dropdown-item" href="/qanda/gitadvanced">GIT Advance</a>
         </div>
-    </div>-->
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            jQuery
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/jquerybasic">jQuery Basic</a>
+            <a class="dropdown-item" href="/qanda/jqueryintermediate">jQuery Intermediat</a>
+            <a class="dropdown-item" href="/qanda/jqueryadvanced">jQuery Advance</a>
+        </div>
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            AJAX
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/ajaxbasic">AJAX Basic</a>
+            <a class="dropdown-item" href="/qanda/ajaxintermediate">AJAX Intermediat</a>
+            <a class="dropdown-item" href="/qanda/ajaxadvanced">AJAX Advance</a>
+        </div>
+    </div>
 </ul>

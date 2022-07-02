@@ -53,7 +53,7 @@ class QandAController extends Controller
     public function create()
     {
         $questions = new QandA();
-        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS'];
+        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS', 'GIT', 'jQuery', 'AJAX'];
         $qtype = ['Basic', 'Intermediate', 'Advanced'];
         return view('QandA.create', compact('questions', 'topics', 'qtype'));
     }
@@ -103,7 +103,7 @@ class QandAController extends Controller
     public function edit(QandA $qandA, $id)
     {
         $question = QandA::where('id', '=', $id)->firstOrFail();
-        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS'];
+        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS','GIT', 'jQuery', 'AJAX'];
         $qtype = ['Basic', 'Intermediate', 'Advanced'];
         return view('QandA.edit', compact('question', 'topics', 'qtype'));
     }
@@ -293,9 +293,90 @@ class QandAController extends Controller
     public function awsadvanced()
     {
         // Query Bases On Topics
-        $awsadvanced = QandA::where([['topic', '=', 'AWS'], ['qtype', '=', 'Advanced']])->paginate(10);
+        $awsadvanced = QandA::where([['topic', '=', 'GIT'], ['qtype', '=', 'Advanced']])->paginate(10);
 
         return view('QandA.awsadvanced', compact('awsadvanced'));
+    }
+
+    // GIT Basic
+    public function gitbasic()
+    {
+        // Query Bases On Topics
+        $gitbasic = QandA::where([['topic', '=', 'GIT'], ['qtype', '=', 'Basic']])->paginate(10);
+
+        return view('QandA.gitbasic', compact('gitbasic'));
+    }
+
+    // GIT Intermediate
+    public function gitintermediate()
+    {
+        // Query Bases On Topics
+        $gitintermediate = QandA::where([['topic', '=', 'GIT'], ['qtype', '=', 'Intermediate']])->paginate(10);
+
+        return view('QandA.gitintermediate', compact('gitintermediate'));
+    }
+
+    // GIT Advanced
+    public function gitadvanced()
+    {
+        // Query Bases On Topics
+        $gitadvanced = QandA::where([['topic', '=', 'GIT'], ['qtype', '=', 'Advanced']])->paginate(10);
+
+        return view('QandA.gitadvanced', compact('gitadvanced'));
+    }
+
+    // jQuery Basic
+    public function jquerybasic()
+    {
+        // Query Bases On Topics
+        $jquerybasic = QandA::where([['topic', '=', 'jQuery'], ['qtype', '=', 'Basic']])->paginate(10);
+
+        return view('QandA.jquerybasic', compact('jquerybasic'));
+    }
+
+    // jQuery Intermediate
+    public function jqueryintermediate()
+    {
+        // Query Bases On Topics
+        $jqueryintermediate = QandA::where([['topic', '=', 'jQuery'], ['qtype', '=', 'Intermediate']])->paginate(10);
+
+        return view('QandA.jqueryintermediate', compact('jqueryintermediate'));
+    }
+
+    // jQuery Advanced
+    public function jqueryadvanced()
+    {
+        // Query Bases On Topics
+        $jqueryadvanced = QandA::where([['topic', '=', 'jQuery'], ['qtype', '=', 'Advanced']])->paginate(10);
+
+        return view('QandA.jqueryadvanced', compact('jqueryadvanced'));
+    }
+
+    // AJAX Basic
+    public function ajaxbasic()
+    {
+        // Query Bases On Topics
+        $ajaxbasic = QandA::where([['topic', '=', 'AJAX'], ['qtype', '=', 'Basic']])->paginate(10);
+
+        return view('QandA.ajaxbasic', compact('ajaxbasic'));
+    }
+
+    // AJAX Intermediate
+    public function ajaxintermediate()
+    {
+        // Query Bases On Topics
+        $ajaxintermediate = QandA::where([['topic', '=', 'AJAX'], ['qtype', '=', 'Intermediate']])->paginate(10);
+
+        return view('QandA.ajaxintermediate', compact('ajaxintermediate'));
+    }
+
+    // AJAX Advanced
+    public function ajaxadvanced()
+    {
+        // Query Bases On Topics
+        $ajaxadvanced = QandA::where([['topic', '=', 'AJAX'], ['qtype', '=', 'Advanced']])->paginate(10);
+
+        return view('QandA.ajaxadvanced', compact('ajaxadvanced'));
     }
 
 }

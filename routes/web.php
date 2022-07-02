@@ -39,6 +39,18 @@ Route::get('qanda/awsbasic', 'QandAController@awsbasic');
 Route::get('qanda/awsintermediate', 'QandAController@awsintermediate');
 Route::get('qanda/awsadvanced', 'QandAController@awsadvanced');
 
+Route::get('qanda/gitbasic', 'QandAController@gitbasic');
+Route::get('qanda/gitintermediate', 'QandAController@gitintermediate');
+Route::get('qanda/gitadvanced', 'QandAController@gitadvanced');
+
+Route::get('qanda/jquerybasic', 'QandAController@jquerybasic');
+Route::get('qanda/jqueryintermediate', 'QandAController@jqueryintermediate');
+Route::get('qanda/jqueryadvanced', 'QandAController@jqueryadvanced');
+
+Route::get('qanda/ajaxbasic', 'QandAController@ajaxbasic');
+Route::get('qanda/ajaxintermediate', 'QandAController@ajaxintermediate');
+Route::get('qanda/ajaxadvanced', 'QandAController@ajaxadvanced');
+
 Route::delete('qanda/{id}', 'QandAController@destroy');
 Route::get('qanda/{id}/edit', 'QandAController@edit');
 Route::patch('qanda/{id}/edit', 'QandAController@update');
