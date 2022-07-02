@@ -103,7 +103,7 @@ class QandAController extends Controller
     public function edit(QandA $qandA, $id)
     {
         $question = QandA::where('id', '=', $id)->firstOrFail();
-        $topics = ['Laravel', 'Php', 'Mysql'];
+        $topics = ['Laravel', 'Php', 'Mysql', 'JavaScript', 'AWS'];
         $qtype = ['Basic', 'Intermediate', 'Advanced'];
         return view('QandA.edit', compact('question', 'topics', 'qtype'));
     }
@@ -158,8 +158,144 @@ class QandAController extends Controller
     {
         // $searchQuestion = QandA::where('question', 'LIKE', "%$request->value%")->get();
         // $searchQuestion = QandA::select(['question', 'answer'])->where('question', 'LIKE', "%$request->value%")->get();
-        $searchQuestion = QandA::select(['question', 'answer'])->where('question', 'LIKE', "%$request->value%")->get()->toArray();
+        $searchQuestion = QandA::select(['id','question', 'answer'])->where('question', 'LIKE', "%$request->value%")->get()->toArray();
 
         return response()->json([$searchQuestion]);
     }
+
+    // Laravel Basic
+    public function laravelbasic()
+    {
+        // Query Bases On Topics
+        $laravelBasic = QandA::where([['topic','=','Laravel'],['qtype','=','Basic']])->paginate(10);
+
+        return view('QandA.laravelbasic', compact('laravelBasic'));
+    }
+
+    // Laravel Intermediate
+    public function laravelintermediate()
+    {
+        // Query Bases On Topics
+        $laravelIntermediate = QandA::where([['topic','=','Laravel'],['qtype','=','Intermediate']])->paginate(10);
+
+        return view('QandA.laravelintermediate', compact('laravelIntermediate'));
+    }
+
+    // Laravel Advanced
+    public function laraveladvanced()
+    {
+        // Query Bases On Topics
+        $laravelAdvanced = QandA::where([['topic','=','Laravel'],['qtype','=','Advanced']])->paginate(10);
+
+        return view('QandA.laraveladvanced', compact('laravelAdvanced'));
+    }
+
+    // PHP Basic
+    public function phpbasic()
+    {
+        // Query Bases On Topics
+        $phpbasic = QandA::where([['topic','=','Php'],['qtype','=','Basic']])->paginate(10);
+
+        return view('QandA.phpbasic', compact('phpbasic'));
+    }
+
+    // PHP Intermediate
+    public function phpintermediate()
+    {
+        // Query Bases On Topics
+        $phpintermediate = QandA::where([['topic','=','Php'],['qtype','=','Intermediate']])->paginate(10);
+
+        return view('QandA.phpintermediate', compact('phpintermediate'));
+    }
+
+    // PHP Advanced
+    public function phpadvanced()
+    {
+        // Query Bases On Topics
+        $phpadvanced = QandA::where([['topic','=','Php'],['qtype','=','Advanced']])->paginate(10);
+
+        return view('QandA.phpadvanced', compact('phpadvanced'));
+    }
+
+    // Mysql Basic
+    public function mysqlbasic()
+    {
+        // Query Bases On Topics
+        $mysqlbasic = QandA::where([['topic','=','Mysql'],['qtype','=','Basic']])->paginate(10);
+
+        return view('QandA.mysqlbasic', compact('mysqlbasic'));
+    }
+
+    // Mysql Intermediate
+    public function mysqlintermediate()
+    {
+        // Query Bases On Topics
+        $mysqlintermediate = QandA::where([['topic','=','Mysql'],['qtype','=','Intermediate']])->paginate(10);
+
+        return view('QandA.mysqlintermediate', compact('mysqlintermediate'));
+    }
+
+    // Mysql Advanced
+    public function mysqladvanced()
+    {
+        // Query Bases On Topics
+        $mysqladvanced = QandA::where([['topic','=','Mysql'],['qtype','=','Advanced']])->paginate(10);
+
+        return view('QandA.mysqladvanced', compact('mysqladvanced'));
+    }
+
+    // JavaScript Basic
+    public function javascriptbasic()
+    {
+        // Query Bases On Topics
+        $javascriptbasic = QandA::where([['topic', '=', 'JavaScript'], ['qtype', '=', 'Basic']])->paginate(10);
+
+        return view('QandA.javascriptbasic', compact('javascriptbasic'));
+    }
+
+    // MyJavaScriptsql Intermediate
+    public function javascriptintermediate()
+    {
+        // Query Bases On Topics
+        $javascriptintermediate = QandA::where([['topic', '=', 'JavaScript'], ['qtype', '=', 'Intermediate']])->paginate(10);
+
+        return view('QandA.javascriptintermediate', compact('javascriptintermediate'));
+    }
+
+    // JavaScript Advanced
+    public function javascriptadvanced()
+    {
+        // Query Bases On Topics
+        $javascriptadvanced = QandA::where([['topic', '=', 'JavaScript'], ['qtype', '=', 'Advanced']])->paginate(10);
+
+        return view('QandA.javascriptadvanced', compact('javascriptadvanced'));
+    }
+
+    // AWS Basic
+    public function awsbasic()
+    {
+        // Query Bases On Topics
+        $awsbasic = QandA::where([['topic', '=', 'AWS'], ['qtype', '=', 'Basic']])->paginate(10);
+
+        return view('QandA.awsbasic', compact('awsbasic'));
+    }
+
+    // AWS Intermediate
+    public function awsintermediate()
+    {
+        // Query Bases On Topics
+        $awsintermediate = QandA::where([['topic', '=', 'AWS'], ['qtype', '=', 'Intermediate']])->paginate(10);
+
+        return view('QandA.awsintermediate', compact('awsintermediate'));
+    }
+
+    // AWS Advanced
+    public function awsadvanced()
+    {
+        // Query Bases On Topics
+        $awsadvanced = QandA::where([['topic', '=', 'AWS'], ['qtype', '=', 'Advanced']])->paginate(10);
+
+        return view('QandA.awsadvanced', compact('awsadvanced'));
+    }
+
 }

@@ -29,7 +29,7 @@ Relationship
 2. A Customer Belongs to the Company
 
 Note: If you keep It Naming convention Singular to Plural
-    the all it works
+the all it works
 
 php artisan migrate:fresh => Generate Fresh Tables
 
@@ -59,9 +59,9 @@ php artisan make:controller QandasController - r -m Qanda
 Eloquent ia able to handel many Different Databases Drivers
 
 IDE Setup:
-    https://www.jetbrains.com/help/phpstorm/2022.1/laravel.html
-    https://www.javatpoint.com/laravel-tinker#:~:text=Laravel%20Tinker%20allows%20you%20to,works%20with%20a%20php%20artisan.
-    https://stillat.com/blog/2016/12/07/laravel-artisan-the-tinker-command
+https://www.jetbrains.com/help/phpstorm/2022.1/laravel.html
+https://www.javatpoint.com/laravel-tinker#:~:text=Laravel%20Tinker%20allows%20you%20to,works%20with%20a%20php%20artisan.
+https://stillat.com/blog/2016/12/07/laravel-artisan-the-tinker-command
 
 Concept Learning In this Project:
 1. Routes:
@@ -73,7 +73,7 @@ Concept Learning In this Project:
 4. HTML forms(Blade)
 
 5. Validation
-    https://laravel.com/docs/master/validation#available-validation-rules
+https://laravel.com/docs/master/validation#available-validation-rules
 
 6. Eloquent
 
@@ -104,5 +104,4 @@ Concept Learning In this Project:
 29. Git Push and Pull
 
 
-
-
+php artisan serve --host=192.168.1.7 --port=8080

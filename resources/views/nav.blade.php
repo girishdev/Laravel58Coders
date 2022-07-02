@@ -14,4 +14,66 @@
     <li class="nav-item">
         <a class="nav-link" href="/qanda">Q and A</a>
     </li>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Laravel
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/laravelbasic">Laravel Basic</a>
+            <a class="dropdown-item" href="/qanda/laravelintermediate">Laravel Intermediat</a>
+            <a class="dropdown-item" href="/qanda/laraveladvanced">Laravel Advance</a>
+        </div>
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PHP
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/phpbasic">PHP Basic</a>
+            <a class="dropdown-item" href="/qanda/phpintermediate">PHP Intermediat</a>
+            <a class="dropdown-item" href="/qanda/phpadvanced">PHP Advance</a>
+        </div>
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mysql
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/mysqlbasic">Mysql Basic</a>
+            <a class="dropdown-item" href="/qanda/mysqlintermediate">Mysql Intermediat</a>
+            <a class="dropdown-item" href="/qanda/mysqladvanced">Mysql Advance</a>
+        </div>
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            JavaScript
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/javascriptbasic">JavaScript Basic</a>
+            <a class="dropdown-item" href="/qanda/javascriptintermediate">JavaScript Intermediat</a>
+            <a class="dropdown-item" href="/qanda/javascriptadvanced">JavaScript Advance</a>
+        </div>
+    </div>
+    <div class="dropdown" style="margin-right: 5px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            AWS
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/qanda/awsbasic">AWS Basic</a>
+            <a class="dropdown-item" href="/qanda/awsintermediate">AWS Intermediat</a>
+            <a class="dropdown-item" href="/qanda/awsadvanced">AWS Advance</a>
+        </div>
+    </div>
+    <!--    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            QandA
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Laravel</a>
+            <a class="dropdown-item" href="#">PHP</a>
+            <a class="dropdown-item" href="#">Mysql</a>
+            <a class="dropdown-item" href="#">JavaScript</a>
+            <a class="dropdown-item" href="#">AWS</a>
+        </div>
+    </div>-->
 </ul>

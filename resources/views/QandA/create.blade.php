@@ -86,8 +86,8 @@
                         success: function(data) {
                             $.each(data, function() {
                                 $.each(this, function(k, v) {
-                                    console.log('each:: ' + k +' :: '+ v.question +' :: '+ v.answer);
-                                    var htmlContent = '<h4>' + v.question + '</h4><h5>' + v.answer + '</h5>';
+                                    console.log('each:: ' + v.id + ' :: '+ k +' :: '+ v.question +' :: '+ v.answer);
+                                    var htmlContent = "<h4>" + v.question + "</h4><h5>" + v.answer + "</h5><a class='btn btn-primary' href=/qanda/"+v.id+"/edit role='button'>Edit</a>";
                                     $('#searchResponse').html(htmlContent);
                                 });
                             });
