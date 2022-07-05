@@ -10,4 +10,9 @@ class QandA extends Model
 
     protected $guarded = [];
 
+    public function lessons()
+    {
+        return 450;
+    }
+
 }

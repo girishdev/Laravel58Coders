@@ -1,4 +1,7 @@
 <?php
+namespace App;
+
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +60,14 @@ Route::patch('qanda/{id}/edit', 'QandAController@update');
 Route::get('qanda/searchQuestion', 'QandAController@searchQuestion');
 Route::resource('qanda', 'QandAController');
 
+Route::get('/api/{term}', function($term) {
+    return ['results' => $term];
+})->middleware('throttle:3');
 
+// Auth::routes(['verify' => true]);
+// Route::get('/', function() {
+//     return action([QandAController:class, 'about']);
+// });
 
 //Route::get('customers', 'CustomersController@index');
 //Route::get('customers/create', 'CustomersController@create');

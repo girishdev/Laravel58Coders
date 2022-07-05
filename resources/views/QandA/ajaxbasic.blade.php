@@ -6,6 +6,11 @@
     <h1>Question and Answers</h1>
     <p><a href="/qanda/create">Add Question and Answers</a></p>
 
+    <!-- Injecting Services with Blade -->
+    @inject('stats', 'App\QandA')
+    {{ $stats->lessons() }}
+    <!-- Injecting Services with Blade -->
+
     @foreach ($ajaxbasic as $key => $question)
         <p><b>Question Number: </b>{{ ++$key }}</p>
         <p><b>Topic: </b>{{ $question->topic }}</p>
