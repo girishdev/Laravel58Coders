@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class QandA extends Model
 {
+
     protected $fillable = ['topic', 'qtype', 'question', 'answer', 'link'];
 
     protected $guarded = [];
@@ -14,5 +15,4 @@ class QandA extends Model
     {
         return 450;
     }
-
 }

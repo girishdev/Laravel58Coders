@@ -3,7 +3,10 @@
         <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link" href="/readme">Read me</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/laravelfeatures">Laravel Features</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="/contact">Contact Us</a>

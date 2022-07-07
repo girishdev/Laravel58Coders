@@ -22,13 +22,22 @@ echo "Adding All Question and Answers:
     Apache / Nginx Server Question
     Docker
 
-Need to Implement:
-    From CK-Editor
-    1. Image Uploading Options
-    2. Vidoe Uploading Options
-    3. Adding Quotes
-    4. Adding Tables Structure
-    
+Few Key Points:
+    1. Get VS Code Shortcut (Print)
+    2. Mysql Commands (Print)
+        - Mysql Query(Joins, Relation ship, View, Procedures and Other Complelex)
+        - Mysql Tips and Tricks
+        - Mysql DataType chart(different db's in Mysql)
+    3. Laravel Artisan Commands (Print)
+        - Laravel Migration Commands
+        - Laravel ORM Commands
+    4. Ubuntu Commands (Print)
+        - Server Related Commands(Apache, Php, Mysql)
+        - SSH Commands
+    5. Git Commands (Print)
+    6. 'Laravel Learning App'
+        On Adding Question - Multiple Search result should come(If it is Multiple result found)
+
 List Of ToDo's:
     1. List Down API responses status code and stick a paper 
         For Eg:- 200(Success), 429(Too Many Requests)

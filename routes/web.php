@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::view('/', 'home');
-Route::view('about', 'about');
+Route::view('readme', 'readme');
 Route::view('contact', 'contact');
 
 Route::get('qanda/laravelbasic', 'QandAController@laravelbasic');
@@ -58,6 +58,15 @@ Route::delete('qanda/{id}', 'QandAController@destroy');
 Route::get('qanda/{id}/edit', 'QandAController@edit');
 Route::patch('qanda/{id}/edit', 'QandAController@update');
 Route::get('qanda/searchQuestion', 'QandAController@searchQuestion');
+
+// Ck-Editor Image Url
+Route::post('images', 'QandAController@uploadimage')->name('qanda.uploadimage');
+
+// Laravel Features
+// Route::get('qanda/laravelfeatures', 'QandAController@laravelfeatures');
+Route::view('laravelfeatures', 'laravelfeatures');
+
+// Question and Answers CRUD Optation Url's
 Route::resource('qanda', 'QandAController');
 
 Route::get('/api/{term}', function($term) {

@@ -163,6 +163,39 @@ class QandAController extends Controller
         return response()->json([$searchQuestion]);
     }
 
+    public function uploadimage(Request $request) 
+    {
+
+        // $QandA = new QandA();
+        // $QandA->id = 0;
+        // $QandA->exists = true;
+        // $image = $QandA->addMediaFromRequest('upload')->toMediaCollection('images');
+
+        // $url = 'https://ckeditor.com/assets/images/header/ckeditor-5-0d286a7dcd.png';
+        
+        // return response()->json([
+        //     'url' => $image->getUrl()
+        // ]);
+
+        // if ($request->hasFile('upload')) {
+        //     $originName = $request->file('upload')->getClientOriginalName();
+        //     $fileName = pathinfo($originName, PATHINFO_FILENAME);
+        //     $extension = $request->file('upload')->getClientOriginalExtension();
+        //     $fileName = $fileName . '_' . time() . '.' .$extension;
+
+        //     $request->file('upload')->move(public_path('media', $fileName));
+        //     $url = asset('media/'.$fileName);
+
+        //     return response()->json(['fileName' => $fileName, 'uploaded' => 1, 'url' => $url]);
+        // }
+    }
+
+    // Laravel Features
+    public function laravelfeatures() 
+    {
+        
+    }
+
     // Laravel Basic
     public function laravelbasic()
     {
