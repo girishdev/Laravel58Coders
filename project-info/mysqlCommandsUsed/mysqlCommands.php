@@ -2,8 +2,17 @@ Mysql Commands:
 For Export:
     mysqldump -u root -p Laravel58Coders > laravel58coders.sql
 
+    For Single Table Export:
+        mysqldump -p --user=root Laravel58Coders companies > companies.sql
+        mysqldump -p --user=root Laravel58Coders customers > customers.sql
+        mysqldump -p --user=root Laravel58Coders qand_a_s > qand_a_s.sql
+
 For Import:
     mysql -u root -p Laravel58Coders < import_file.sql
+
+    For Single Table Import:
+        mysql -u root -p Laravel58Coders < companies.sql
+        mysql -u root -p Laravel58Coders < customers.sql
 
 Granting Permission:
     GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';

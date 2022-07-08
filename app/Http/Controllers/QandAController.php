@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class QandAController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -163,7 +164,7 @@ class QandAController extends Controller
         return response()->json([$searchQuestion]);
     }
 
-    public function uploadimage(Request $request) 
+    public function uploadimage(Request $request)
     {
 
         // $QandA = new QandA();
@@ -172,7 +173,7 @@ class QandAController extends Controller
         // $image = $QandA->addMediaFromRequest('upload')->toMediaCollection('images');
 
         // $url = 'https://ckeditor.com/assets/images/header/ckeditor-5-0d286a7dcd.png';
-        
+
         // return response()->json([
         //     'url' => $image->getUrl()
         // ]);
@@ -191,9 +192,9 @@ class QandAController extends Controller
     }
 
     // Laravel Features
-    public function laravelfeatures() 
+    public function laravelfeatures()
     {
-        
+
     }
 
     // Laravel Basic
