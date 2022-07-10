@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home');
 Route::view('readme', 'readme');
 Route::view('contact', 'contact');
+Route::view('about', 'about');
 
 Route::get('qanda/laravelbasic', 'QandAController@laravelbasic');
 Route::get('qanda/laravelintermediate', 'QandAController@laravelintermediate');
@@ -54,6 +55,7 @@ Route::get('qanda/ajaxbasic', 'QandAController@ajaxbasic');
 Route::get('qanda/ajaxintermediate', 'QandAController@ajaxintermediate');
 Route::get('qanda/ajaxadvanced', 'QandAController@ajaxadvanced');
 
+// ToDo::Route Model Binding Demo
 Route::delete('qanda/{id}', 'QandAController@destroy');
 Route::get('qanda/{id}/edit', 'QandAController@edit');
 Route::patch('qanda/{id}/edit', 'QandAController@update');
@@ -88,5 +90,10 @@ Route::get('/api/{term}', function($term) {
 
 Route::resource('customers', 'CustomersController');
 
-
+// ToDo::Subdomain Routing Demo
+Route::domain('{account}.example.com')->group(function () {
+    Route::get('user/{id}', function ($account, $id) {
+        //
+    });
+});
 

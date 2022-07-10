@@ -33,9 +33,77 @@
 
 </ul>
 
-<h5>Possible Features included Here:</h5><hr>
+<h5>Gather Main Main Concepts First / Possible Features Included Here:</h5><hr>
+
 <ul>
-    <li>Feature One</li>
+    <li>Php Laravel Requirement <i class="bi bi-check2-all"></i>
+
+    </li>
+    <li>Route Model Binding <i class="bi bi-check2-all"></i><br>
+        - Done On Laravel v5.8<br>
+    </li>
+    <li>Service Container</li>
+    <li>Service Providers</li>
+    <li>Facades</li>
+    <hr>
+    <!--<li></li>-->
+    <li>Routing</li>
+    <li>Middleware</li>
+    <li>CSRF Protection</li>
+    <li>Controllers</li>
+    <li>Requests</li>
+    <li>Responses</li>
+    <li>Views</li>
+    <li>Blade Templates</li>
+    <li>Bundling Assets</li>
+    <li>URL Generation</li>
+    <li>Session</li>
+    <li>Validation</li>
+    <li>Error Handling</li>
+    <li>Logging</li>
+    <li></li>
+    <li>Artisan Console</li>
+    <li>Broadcasting</li>
+    <li>Cache</li>
+    <li>Collections</li>
+    <li>Contracts</li>
+    <li>Events</li>
+    <li>File Storage</li>
+    <li>Helpers</li>
+    <li>HTTP Client</li>
+    <li>Localization</li>
+    <li>Mail</li>
+    <li>Notifications</li>
+    <li>Package Development</li>
+    <li>Queues</li>
+    <li>Rate Limiting</li>
+    <li>Task Scheduling</li>
+    <li></li>
+    <li>Authentication</li>
+    <li>Authorization</li>
+    <li>Email Verification</li>
+    <li>Encryption</li>
+    <li>Hashing</li>
+    <li>Password Reset</li>
+    <li></li>
+    <li>Query Builder</li>
+    <li>Pagination</li>
+    <li>Migrations</li>
+    <li>Seeding</li>
+    <li>Redis</li>
+    <li></li>
+    <li>Relationships</li>
+    <li>Collections</li>
+    <li>Mutators / Casts</li>
+    <li>API Resources</li>
+    <li>Serialization</li>
+    <li></li>
+    <li>HTTP Tests</li>
+    <li>Console Tests</li>
+    <li>Browser Tests</li>
+    <li>Database</li>
+    <li>Mocking</li>
+
 </ul>
 
 @endsection

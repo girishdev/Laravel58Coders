@@ -1,4 +1,6 @@
-Third week Summary:
+<?php
+
+echo "Third week Summary:
 1. How much topic we have completed
     Validation-5
         Form Requests
@@ -183,7 +185,7 @@ Third week Summary:
 
             Model Factory Generation
 
-            Custom Blade "If" Directives
+            Custom Blade 'If' Directives
 
             What's New in Laravel Mix
 
@@ -377,6 +379,7 @@ Third week Summary:
         Laravel TTD(Test Driven Development)
             https://laracasts.com/series/build-a-laravel-app-with-tdd
             https://laracasts.com/series/phpunit-testing-in-laravel
+            https://laravel.com/docs/9.x/testing
 
             https://www.youtube.com/watch?v=0Rjsuw1ScXg&list=PLpzy7FIRqpGAbkfdxo1MwOS9xjG3O3z1y
 
@@ -412,7 +415,7 @@ Third week Summary:
     What is Laravel gulp?
     What is Laravel webpack?
     What is Laravel sass?
-    What is Tailwind Css framework?
+    What is Tailwind Css framework?";
 
 
 

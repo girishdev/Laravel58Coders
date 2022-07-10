@@ -19,6 +19,7 @@ class QandAController extends Controller
         // Fetching all the Question and Answers
         // $questions = QandA::all();
         // $questions = QandA::simplePaginate(10);
+        // ToDo: Paginating Eloquent Results
         $questions = QandA::paginate(10);
 
         // Query Bases On Topics
