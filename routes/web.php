@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/testing', function () {
+    dd($this->app());
+});
 
 Route::view('/', 'home');
 Route::view('readme', 'readme');

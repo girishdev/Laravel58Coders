@@ -58,6 +58,13 @@ php artisan make:controller QandasController - r -m Qanda
 
 Eloquent ia able to handel many Different Databases Drivers
 
+For Image Folder Sync We have Run:
+    php artisan storage:link
+
+Image Image Intervention:
+    https://image.intervention.io/v2/introduction/installation
+    composer require intervention/image
+
 IDE Setup:
 https://www.jetbrains.com/help/phpstorm/2022.1/laravel.html
 https://www.javatpoint.com/laravel-tinker#:~:text=Laravel%20Tinker%20allows%20you%20to,works%20with%20a%20php%20artisan.

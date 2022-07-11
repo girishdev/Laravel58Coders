@@ -1,0 +1,30 @@
+[2022-07-11 00:40:20] local.ERROR: The "--except-vendor" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--except-vendor\" option does not exist. at /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php:201)
+[stacktrace]
+#0 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php(145): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption()
+#1 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php(79): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption()
+#2 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /var/www/html/Laravel58Coders/vendor/symfony/console/Command/Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run()
+#6 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand()
+#7 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun()
+#8 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run()
+#9 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run()
+#10 /var/www/html/Laravel58Coders/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#11 {main}
+"} 
+[2022-07-11 00:40:25] local.ERROR: The "--only-vendor" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--only-vendor\" option does not exist. at /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php:201)
+[stacktrace]
+#0 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php(145): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption()
+#1 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/ArgvInput.php(79): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption()
+#2 /var/www/html/Laravel58Coders/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /var/www/html/Laravel58Coders/vendor/symfony/console/Command/Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run()
+#6 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand()
+#7 /var/www/html/Laravel58Coders/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun()
+#8 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run()
+#9 /var/www/html/Laravel58Coders/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run()
+#10 /var/www/html/Laravel58Coders/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#11 {main}
+"} 

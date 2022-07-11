@@ -13,6 +13,7 @@ For Import:
     For Single Table Import:
         mysql -u root -p Laravel58Coders < companies.sql
         mysql -u root -p Laravel58Coders < customers.sql
+        mysql -u root -p Laravel58Coders < qand_a_s.sql
 
 Granting Permission:
     GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';

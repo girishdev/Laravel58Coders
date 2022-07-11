@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Company;
 use App\Customer;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class CustomersController extends Controller
 {
@@ -39,6 +40,7 @@ class CustomersController extends Controller
         return view('customers.create', compact('companies', 'customer'));
     }
 
+    /** @noinspection PhpUndefinedMethodInspection */
     public function store()
     {
         // Validation
@@ -51,7 +53,9 @@ class CustomersController extends Controller
 
         // Saving to Database In One Line
         // Customer::create($data);
-        Customer::create($this->validateRequest());
+        $customer = Customer::create($this->validateRequest());
+
+        $this->storeImage($customer);
 
         // Saving to Database
         /* $customer = new Customer();
@@ -92,6 +96,8 @@ class CustomersController extends Controller
         // $customer->update($data);
         $customer->update($this->validateRequest());
 
+        $this->storeImage($customer);
+
         return redirect('customers/'.$customer->id);
     }
 
@@ -105,12 +111,56 @@ class CustomersController extends Controller
     public function validateRequest()
     {
         // Validation
-        return request()->validate([
+        // Before adding Images
+        /* return request()->validate([
                 'name' => 'required|min:3',
                 'email' => 'required|email',
                 'status' => 'required',
                 'company_id' => 'required',
+            ]);*/
+
+        // tap Method to Redirect and Validate
+        /* return tap(request()->validate([
+            'name' => 'required|min:3',
+            'email' => 'required|email',
+            'status' => 'required',
+            'company_id' => 'required',
+
+        ]), function () {
+
+            if (request()->hasFile('image')) {
+                request()->validate([
+                    'image' => 'file|image',
+                ]);
+            }
+
+        });*/
+
+        // Laravel Inbuilt Method Sometimes for Image uploading
+        return request()->validate([
+            'name' => 'required|min:3',
+            'email' => 'required|email',
+            'status' => 'required',
+            'company_id' => 'required',
+            'image' => 'sometimes|file|image|max:5000',
+        ]);
+
+    }
+
+    private function storeImage($customer)
+    {
+        if (request()->has('image')) {
+            $customer->update([
+                'image' => request()->image->store('uploads', 'public')
             ]);
+
+            // $image = Image::make(public_path(('storage/' . $customer->image)))->fit(300, 300);
+            // $image = Image::make(public_path(('storage/' . $customer->image)))->fit(300, 1000); // Filled Every thing with that 1000px
+            // $image = Image::make(public_path(('storage/' . $customer->image)))->crop(300, 300);
+
+            $image = Image::make(public_path(('storage/' . $customer->image)))->resize(500,400);
+            $image->save();
+        }
     }
 
 }

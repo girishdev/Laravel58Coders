@@ -33,6 +33,8 @@
 
 <h5>Gather Main Main Concepts First / Possible Features Included Here:</h5><hr>
 
+<a target="_blank" href="https://docs.google.com/spreadsheets/d/1ii5INIH9fMW8JTIWaGMjTqm1Y6ONkanC6Pka3vvq_Ww/edit?usp=sharing">LaravelFeaturesDiggingDeeper</a>
+
 <ul>
     <li>Php Laravel Requirement <i class="bi bi-check2-all"></i>
 
@@ -40,9 +42,34 @@
     <li>Route Model Binding <i class="bi bi-check2-all"></i><br>
         - Done On Laravel v5.8<br>
     </li>
-    <li>Service Container</li>
-    <li>Service Providers</li>
-    <li>Facades</li>
+    <li>Service Container<br>
+        <b>- Binding</b><br>
+            <b>Simple Bindings</b><br>
+            use App\Services\Transistor;<br>
+            use App\Services\PodcastParser;<br><br>
+
+            $this->app->bind(Transistor::class, function ($app) {<br>
+                return new Transistor($app->make(PodcastParser::class));<br>
+            });<br><br>
+            <b>Binding A Singleton</b><br>
+            The singleton method binds a class or interface into the container that should only be resolved one time. Once a singleton binding is resolved, the same object instance will be returned on subsequent calls into the container:<br>
+            For Example:-<br>
+            use App\Services\Transistor;<br>
+            use App\Services\PodcastParser;<br><br>
+
+            $this->app->singleton(Transistor::class, function ($app) {<br>
+                return new Transistor($app->make(PodcastParser::class));<br>
+            });<br>
+        - Resolving <br>
+        - Method Invocation & Injection <br>
+        - Container Events <br>
+    </li>
+    <li>Service Providers
+
+    </li>
+    <li>Facades
+
+    </li>
     <hr>
     <!--<li></li>-->
     <li>Routing</li>
