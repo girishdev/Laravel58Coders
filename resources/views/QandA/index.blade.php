@@ -138,13 +138,82 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="phpBasic" role="tabpanel" aria-labelledby="phpBasic-tab">
-                            Basic
+                            @foreach ($phpbasic as $key => $question)
+                                <p><b>Question Number: </b>{{ ++$key }}</p>
+                                <p><b>Topic: </b>{{ $question->topic }}</p>
+                                <p><b>Question Type: </b>{{ $question->qtype }}</p>
+                                <p><b>Question: </b>{{ $question->question }}</p>
+                                <p><b>Answer: </b>{!! $question->answer !!}</p>
+                                @isset($question->link)
+                                    <p><b>Link: </b><a href="{{ $question->link }}" target="_blank">{{ $question->link }}</a></p>
+                                @endisset
+                                <form action="/qanda/{{ $question->id }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <p>
+                                        <b>Created At: </b>{{ $question->created_at }} |
+                                        <a class="btn btn-primary btn-sm" href="/qanda/{{ $question->id }}/edit" role="button">Edit</a> |
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </p>
+                                </form>
+                                <hr>
+                            @endforeach
+
+                            <div class="pagination">
+                                {!! $phpbasic->render() !!}
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="phpIntermediate" role="tabpanel" aria-labelledby="phpIntermediate-tab">
-                            Intermediate
+                            @foreach ($phpintermediate as $key => $question)
+                                <p><b>Question Number: </b>{{ ++$key }}</p>
+                                <p><b>Topic: </b>{{ $question->topic }}</p>
+                                <p><b>Question Type: </b>{{ $question->qtype }}</p>
+                                <p><b>Question: </b>{{ $question->question }}</p>
+                                <p><b>Answer: </b>{!! $question->answer !!}</p>
+                                @isset($question->link)
+                                    <p><b>Link: </b><a href="{{ $question->link }}" target="_blank">{{ $question->link }}</a></p>
+                                @endisset
+                                <form action="/qanda/{{ $question->id }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <p>
+                                        <b>Created At: </b>{{ $question->created_at }} |
+                                        <a class="btn btn-primary btn-sm" href="/qanda/{{ $question->id }}/edit" role="button">Edit</a> |
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </p>
+                                </form>
+                                <hr>
+                            @endforeach
+
+                            <div class="pagination">
+                                {!! $phpintermediate->render() !!}
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="phpAdvanced" role="tabpanel" aria-labelledby="phpAdvanced-tab">
-                            Advanced
+                            @foreach ($phpadvanced as $key => $question)
+                                <p><b>Question Number: </b>{{ ++$key }}</p>
+                                <p><b>Topic: </b>{{ $question->topic }}</p>
+                                <p><b>Question Type: </b>{{ $question->qtype }}</p>
+                                <p><b>Question: </b>{{ $question->question }}</p>
+                                <p><b>Answer: </b>{!! $question->answer !!}</p>
+                                @isset($question->link)
+                                    <p><b>Link: </b><a href="{{ $question->link }}" target="_blank">{{ $question->link }}</a></p>
+                                @endisset
+                                <form action="/qanda/{{ $question->id }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <p>
+                                        <b>Created At: </b>{{ $question->created_at }} |
+                                        <a class="btn btn-primary btn-sm" href="/qanda/{{ $question->id }}/edit" role="button">Edit</a> |
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </p>
+                                </form>
+                                <hr>
+                            @endforeach
+
+                            <div class="pagination">
+                                {!! $phpadvanced->render() !!}
+                            </div>
                         </div>
                     </div>
                 </div>

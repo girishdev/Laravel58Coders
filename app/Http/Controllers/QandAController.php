@@ -28,6 +28,9 @@ class QandAController extends Controller
         $laravelAdvanced = QandA::where([['topic','=','Laravel'],['qtype','=','Advanced']])->paginate(10);
 
         $phpQuestions = QandA::where('topic','=','Php')->paginate(10);
+        $phpbasic = QandA::where([['topic', '=', 'Php'], ['qtype', '=', 'Basic']])->paginate(10);
+        $phpintermediate = QandA::where([['topic', '=', 'Php'], ['qtype', '=', 'Intermediate']])->paginate(10);
+        $phpadvanced = QandA::where([['topic', '=', 'Php'], ['qtype', '=', 'Advanced']])->paginate(10);
 
         $mysqlQuestions = QandA::where('topic','=','Mysql')->paginate(10);
 
@@ -40,6 +43,9 @@ class QandAController extends Controller
             'laravelIntermediate',
             'laravelAdvanced',
             'phpQuestions',
+            'phpbasic',
+            'phpintermediate',
+            'phpadvanced',
             'mysqlQuestions',
             'awsBasic',
             'awsIntermediate',

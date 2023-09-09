@@ -27,6 +27,12 @@
         <hr>
     @endforeach
 
+    <div class="container">
+        <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/awshbXT0fkk">
+        </iframe>
+    </div>
+
     <div class="pagination">
         {!! $laravelBasic->render() !!}
     </div>

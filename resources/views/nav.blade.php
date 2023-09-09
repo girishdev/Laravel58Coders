@@ -2,21 +2,15 @@
     <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/readme">Read me</a>
-    </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="/laravelfeatures">Laravel Features</a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="/contact">Contact Us</a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="/customers">Customer List</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/qanda">Q and A</a>
-    </li>
+    </li> -->
     <div class="dropdown" style="margin-right: 5px;">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Laravel
@@ -25,6 +19,7 @@
             <a class="dropdown-item" href="/qanda/laravelbasic">Laravel Basic</a>
             <a class="dropdown-item" href="/qanda/laravelintermediate">Laravel Intermediat</a>
             <a class="dropdown-item" href="/qanda/laraveladvanced">Laravel Advance</a>
+            <a class="dropdown-item" href="/laravelfeatures">Laravel Features</a>
         </div>
     </div>
     <div class="dropdown" style="margin-right: 5px;">
@@ -97,4 +92,13 @@
             <a class="dropdown-item" href="/qanda/ajaxadvanced">AJAX Advance</a>
         </div>
     </div>
+    <li class="nav-item">
+        <a class="nav-link" href="/readme">Read me</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/qanda">Q and A</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/qanda">Language</a>
+    </li>
 </ul>
